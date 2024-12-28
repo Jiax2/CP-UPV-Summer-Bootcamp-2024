@@ -10,7 +10,7 @@ int main(){
             for(int j = 0; j<8; j++){
                 cin>>casilla; 
                 bool blanco = (i+j)%2 == 0; 
-                if((blanco && casilla == 'W') || !blanco && casilla == 'B'){
+                if((blanco && casilla == 'W') || (!blanco && casilla == 'B')){
                     board[i][j] = casilla; 
                 }else{
                     board[i][j] ='X'; 

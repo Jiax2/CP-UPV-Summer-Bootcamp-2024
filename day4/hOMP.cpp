@@ -1,4 +1,5 @@
 #include<bits/stdc++.h>
+#include<omp.h>
 using namespace std; 
 int main(){
     int n, m; 
@@ -6,7 +7,7 @@ int main(){
     int arr[n][m]; 
     int maximo = 0; 
     double start = omp_get_wtime(); 
-
+    #pragma omp parallel for reduction(max: maximo)
     for(int i = 0; i< n; i++){
         int suma = 0; 
         for(int j= 0; j<m ; j++){
@@ -15,6 +16,7 @@ int main(){
         }
         if(suma>maximo){ maximo = suma; }
     }
+    #pragma omp parallel for reduction(max: maximo)
     for(int i = 0; i< m; i++){
         int suma = 0; 
         for(int j = 0; j< n; j++){
