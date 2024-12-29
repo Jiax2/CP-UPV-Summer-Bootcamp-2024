@@ -1,5 +1,5 @@
 #include<bits/stdc++.h>
-#include<omp.h>
+//#include<omp.h>
 using namespace std; 
 int main(){
     int n, m; 
@@ -7,7 +7,7 @@ int main(){
     int arr[n][m]; 
     int aux;
     int maximo = 0, suma; 
-    double start = omp_get_wtime();
+    //double start = omp_get_wtime();
     for(int i = 0; i< n; i++){
         suma = 0; 
         for(int j= 0; j<m ; j++){
@@ -24,7 +24,7 @@ int main(){
         }
         if (suma > maximo){ maximo = suma; }
     }
-    double end = omp_get_wtime(); 
+    //double end = omp_get_wtime(); 
     cout << maximo;
-    cout<< "Tiempo ejec: "<< (end - start); 
+    //cout<< "Tiempo ejec: "<< (end - start); 
 }
