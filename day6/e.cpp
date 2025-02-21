@@ -19,10 +19,14 @@ void DFS(int row,int col, vector<vector<char>> &adj, vector<vector<bool>> &visit
             DFS(row+1, col, adj, visited, count +1, s);
             DFS(row, col+1, adj, visited, count +1, s); 
             DFS(row, col-1, adj, visited, count+1, s); 
+            DFS(row-1, col, adj, visited, count +1, s);
         }
     }
 }
 int main(){
+    //desincronizar cin
+    ios::sync_with_stdio(0);
+    cin.tie(0);
     int n; 
     cin>>n; 
     
