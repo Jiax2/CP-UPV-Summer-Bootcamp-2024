@@ -4,5 +4,8 @@ using namespace std;
 //DEBUG #define d(x) cerr << #x << "=" << x <<endl 
 
 int main(){
-    
+    //desincroniza el cin 
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+    return 0; 
 }
